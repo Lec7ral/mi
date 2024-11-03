@@ -24,7 +24,7 @@ message_to_send = None
 # Event for controlling spam
 stop_event = asyncio.Event()
 spam_task = None
-#@Client.on_message(filters.private & filters.command(['stspam']))
+@Client.on_message(filters.private & filters.command(['stspam']))
 async def fnciona(client, message):
     logging.error(f"Funciona y no entra xq no e da la gana {message}")
     await message.reply("Has usado el comando /stspam")
