@@ -10,7 +10,7 @@ from pyrogram import Client, filters, enums, __version__ as pyrogram_version
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaDocument, BotCommand
 from .settings import settings_query
 #from .userSettings import user_settings_query 
-from .autoforward import autoforward
+#from .autoforward import autoforward
 main_buttons = [[
         InlineKeyboardButton('❗ ʜᴇʟᴘ', callback_data='help')],[
         InlineKeyboardButton('🎓 ᴀʙᴏᴜᴛ ', callback_data='about')
