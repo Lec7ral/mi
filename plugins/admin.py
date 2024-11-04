@@ -8,10 +8,6 @@ from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
 
 botStartTime = time.time()
-@Client.on_message(filters.private & filters.command(['start']))
-async def fnciona(client, message):
-    logging.error(f"Funciona y no entra xq no e da la gana {message}")
-    await message.reply("Has usado el comando /stspam")
 
 @Client.on_message(filters.private & filters.command(["ping", "p"]))
 async def ping(_, message):
