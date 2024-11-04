@@ -34,12 +34,12 @@ async def user_main_buttons(user_id):
 
 
 #===================Admin Start Function===================#
-@Client.on_message(filters.private & filters.command(['start']))
+#@Client.on_message(filters.private & filters.command(['start']))
 async def fnciona(client, message):
     logging.error(f"Funciona y no entra xq no e da la gana {message}")
     await message.reply("Has usado el comando /stspam")
         
-@Client.on_message(filters.private & filters.command(['start']) & filters.user(Config.OWNER_ID))
+#@Client.on_message(filters.private & filters.command(['start']) & filters.user(Config.OWNER_ID))
 async def start_admin(client, message):
     user = message.from_user
     if not await db.is_user_exist(user.id):
@@ -56,7 +56,7 @@ async def start_admin(client, message):
     )
 
 #==================User Start Function===============#
-@Client.on_message(filters.private & filters.command(['start']) & ~filters.user(Config.OWNER_ID)) 
+#@Client.on_message(filters.private & filters.command(['start']) & ~filters.user(Config.OWNER_ID)) 
 async def start_user(client, message):
     try:
             user = message.from_user
