@@ -36,6 +36,7 @@ async def user_main_buttons(user_id):
 
 @Client.on_message(filters.private & filters.command(['start']) & filters.user(Config.OWNER_ID))
 async def start_admin(client, message):
+    logging.info("Al menos hasta aqui")
     user = message.from_user
     if not await db.is_user_exist(user.id):
         await db.add_user(user.id, user.first_name)
