@@ -18,7 +18,6 @@ main_buttons = [[
 async def user_main_buttons(user_id):
   status = await db.get_user_status(user_id)
   logging.info(f"tiene el status en {status}")
-      # Alternar entre 'start' y 'stop' según el estado
   if status:
       start_stop_button = InlineKeyboardButton('🛑 Stop', callback_data='stopspam')
   else:
