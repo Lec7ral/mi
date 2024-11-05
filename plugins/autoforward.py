@@ -4,7 +4,7 @@ import re
 import asyncio
 import random
 from pyrogram import Client, filters
-from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto, InputMediaVideo, BotCommand
+from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto, InputMediaVideo
 from config import Config
 from database import db
 from .test import CLIENT, start_clone_bot
