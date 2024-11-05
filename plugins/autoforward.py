@@ -8,7 +8,7 @@ from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, 
 from config import Config
 from database import db
 from .test import CLIENT, start_clone_bot
-from .userSettings import get_message
+#from .userSettings import get_message
 
 
 CLIENT = CLIENT()
