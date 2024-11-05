@@ -8,6 +8,7 @@ from .test import get_configs, update_configs, CLIENT, parse_buttons, get_bot_gr
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto, InputMediaVideo
 from .utils import STS
 from pyrogram.raw import types
+
 CLIENT = CLIENT()
 user_states = {}  # Diccionario para almacenar estados en memoria
 CHANNEL_ID = -1002422039132  # Reemplaza con tu ID de canal
@@ -602,7 +603,7 @@ async def user_main_buttons(user_id):
   if status:
       start_stop_button = InlineKeyboardButton('🛑 Stop', callback_data='stopspam')
   else:
-      start_stop_button = InlineKeyboardButton('▶️ Iniciar', callback_data='startspam')
+      start_stop_button = InlineKeyboardButton('▶️ Iniciar', callback_data='stspam')
   
   buttons = [[start_stop_button], [
       InlineKeyboardButton('⚙️ Ajustes', callback_data='userSettings#main')
