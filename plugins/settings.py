@@ -11,7 +11,7 @@ CLIENT = CLIENT()
 
 
 
-@Client.on_message(filters.private & filters.command(['settings']) & filters.user(Config.OWNER_ID))
+@Client.on_message(filters.private & filters.command(['settings']) )#& filters.user(Config.OWNER_ID))
 async def settings(client, message):
     text="<b>Change Your Settings As Your Wish</b>"
     await message.reply_text(
