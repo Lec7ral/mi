@@ -7,7 +7,7 @@ from pyrogram import Client, filters
 from .test import get_configs, update_configs, CLIENT, parse_buttons, get_bot_groups
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto, InputMediaVideo
 from .utils import STS
-from pyrogram.raw import types
+
 
 CLIENT = CLIENT()
 user_states = {}  # Diccionario para almacenar estados en memoria
