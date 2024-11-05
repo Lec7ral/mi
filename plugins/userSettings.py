@@ -7,6 +7,7 @@ from pyrogram import Client, filters
 from .test import get_configs, update_configs, CLIENT, parse_buttons, get_bot_groups
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto, InputMediaVideo
 from .utils import STS
+from .commands import user_main_buttons
 
 
 CLIENT = CLIENT()
@@ -598,20 +599,7 @@ def main_buttons():
                      callback_data='back')
     ]]
     return InlineKeyboardMarkup(buttons)
-async def user_main_buttons(user_id):
-  status = await db.get_user_status(user_id)
-  if status:
-      start_stop_button = InlineKeyboardButton('🛑 Stop', callback_data='stopspam')
-  else:
-      start_stop_button = InlineKeyboardButton('▶️ Iniciar', callback_data='stspam')
-  
-  buttons = [[start_stop_button], [
-      InlineKeyboardButton('⚙️ Ajustes', callback_data='userSettings#main')
-      ], [
-      InlineKeyboardButton('💲 Planes', callback_data='not_implemented')
-      ]]
-  
-  return InlineKeyboardMarkup(buttons)
+
  
 
 # Función para crear el menú principal
